@@ -56,4 +56,9 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
-  condition: succeeded()
+  condition: succeeded() 
+- task: Application security testing@2023
+  inputs:
+    enableProxy: false
+    enableSastScan: true
+    enableDependencyScan: false
