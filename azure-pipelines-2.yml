@@ -50,6 +50,8 @@ steps:
     testType: 'app'
     monitorWhen: 'always'
     failOnIssues: true
+    testDirectory: $(wwwrootDir)
+
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - $(buildConfiguration)'
   inputs:
